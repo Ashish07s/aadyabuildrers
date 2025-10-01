@@ -1235,6 +1235,26 @@
                 display: block !important;
             }
         }
+
+        .hero-content img {
+  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 1025px) {
+  .desktop-image { display: block !important; }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  .tablet-image { display: block !important; }
+}
+
+@media (max-width: 480px) {
+  .mobile-image { display: block !important; }
+}
+
     </style>
 </head>
 <body>
@@ -1263,11 +1283,18 @@
     </header>
 
     <!-- Home Section -->
-    <section id="home">
-        <div class="hero-content">
-            <img src="asset/images/Project Homepage.png" alt="Luxury Living">
-        </div>
-    </section>
+   <section id="home">
+  <div class="hero-content">
+    <!-- Desktop -->
+    <img src="asset/images/Project Homepage.png" alt="Luxury Living" class="desktop-image">
+
+    <!-- Tablet -->
+    <img src="asset/images/Mobile-image.png" alt="Luxury Living" class="tablet-image">
+
+    <!-- Mobile -->
+    <img src="asset/images/Mobile-image.png" alt="Luxury Living" class="mobile-image">
+  </div>
+</section>
 
     <!-- About Us Section -->
     <section id="about">
